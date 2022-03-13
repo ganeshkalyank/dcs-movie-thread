@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Edit Review{% endblock %}
+
+{% block body %}
+    <div class="d-flex justify-content-center">
+        <form class="col-lg-4 shadow p-5 rounded" method="post">
+            <h3 class="mb-3">Edit Review</h3>
+            <div class="form-floating mb-3">
+                <textarea name="content" style="height: 100px;" class="form-control" placeholder=".">{{ review.content }}</textarea>
+                <label>Content</label>
+            </div>
+            <button class="btn btn-dark" type="submit">Save</button>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Edit Movie{% endblock %}
+
+{% block body %}
+    <div class="d-flex justify-content-center">
+        <form class="col-lg-4 shadow p-5 rounded" method="post">
+            <h3 class="mb-3">Add movie</h3>
+            <div class="form-floating mb-3">
+                <input type="text" name="name" class="form-control" placeholder="." value="{{ movie.name }}">
+                <label>Movie Name</label>
+            </div>
+            <div class="form-floating mb-3">
+                <textarea name="description" style="height: 100px;" class="form-control" placeholder=".">{{ movie.description }}</textarea>
+                <label>Description</label>
+            </div>
+            <button class="btn btn-dark" type="submit">Add</button>
+        </form>
+    </div>
+{% endblock %}
