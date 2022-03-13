@@ -13,6 +13,7 @@
         <div class="col-lg-6 shadow p-5 rounded">
             <h3>Reviews</h3>
             {% for review in reviews %}
+            <hr>
             <div class="my-3">
                 <p>{{ review.content }}</p>
                 <p class="fw-light">Posted by {{review.user.username}}</p>
