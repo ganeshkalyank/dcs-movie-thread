@@ -21,6 +21,5 @@ Movie Review Forum made for DCS Project
 - In the top right corner, there will be an option to add movie too.
 
 ### Note:
-- As this is actually a backend project, I didn't concentrated much on the frontend part. There might be some responsiveness issues in some devices, thought I haven't encountered any yet.
-- I thought of implementing OAuth also but due to time constraint and as I have been travelling for last 4 days, I couldn't be able to do that.
-- Finally, there is no criteria for creating the username. So, please remember the exact username with which the account is created, along with spaces and capitals.
+- As this is mainly a backend project, Frontend part was not much concentrated. There might be some responsiveness issues in some devices, thought nothing were encountered yet.
+- There is no criteria for creating the username. So, please remember the exact username with which the account is created, along with spaces and capitals.
