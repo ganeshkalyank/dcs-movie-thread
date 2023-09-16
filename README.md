@@ -1,5 +1,5 @@
 # Movie Thread
-Movie Review Forum made for DCS Project
+A simple movie reviewing platform.
 
 ### Instructions for normal user:
 - Once the deployed link is opened, it'll ask for login.
