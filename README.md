@@ -1,4 +1,4 @@
-# dcs_moviethread
+# Movie Thread
 Movie Review Forum made for DCS Project
 
 ### Instructions for normal user:
