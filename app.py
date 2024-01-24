@@ -3,20 +3,15 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin,LoginManager,login_required,login_user,logout_user,current_user
 from os import environ
 from werkzeug.security import generate_password_hash,check_password_hash
+from werkzeug.middleware.proxy_fix import ProxyFix
 
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = environ.get("DATABASE_URL").replace("postgres","postgresql")
+app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_host=1)
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///database.db"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-app.config["SECRET_KEY"] = environ.get("SECRET_KEY")
+app.config["SECRET_KEY"] = "may the force be with you"
 
 db = SQLAlchemy(app)
-
-@app.before_request
-def before_request():
-    if not request.is_secure:
-        url = request.url.replace('http://', 'https://', 1)
-        code = 301
-        return redirect(url, code=code)
 
 class Users(db.Model,UserMixin):
     id = db.Column(db.Integer, primary_key=True)
